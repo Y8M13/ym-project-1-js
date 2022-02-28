@@ -18,40 +18,7 @@ const priorityInput = () => document.getElementById("priority");
 const deadlineInput = () => document.getElementById("deadline");
 const commentsInput = () => document.getElementById("comments");
 
-
-
-
-/*** Templates ***/                                   //a reusable block of code can be repeated throughout the page
-// const homePageTemplate = () => {
-//     return `
-//     <h1 class="center-align">Welcome to my Task Manager</h1> 
-//     `
-// }                                                     //backticks are the best way to make templates
-                                                      //templates are used to return strings. I can also use multi-lined strings
-
-// const taskLogTemplate = () => {                    //Old Version
-//     return `
-//     <h1 class="center-align">Task Log</h1>
-//       <table class="highlight">
-//       <thead>
-//       <tr>
-//           <th class="center-align">Date</th>
-//           <th class="center-align">Name</th>
-//           <th class="center-align">Category</th>
-//           <th class="center-align">Status</th>
-//           <th class="center-align">Priority</th>
-//           <th class="center-align">Deadline</th>
-//           <th class="center-align">Comments</th>
-//       </tr>
-//       </thead>
-
-//       <tbody>
-//         ${ renderTasks() }
-//       </tbody>
-// </table>
-//     `
-// }                                                      
-
+  
 
 const newTaskTemplate = (task) => {                                 //New Updates:
     const tr = document.createElement("tr");
@@ -78,20 +45,6 @@ const newTaskTemplate = (task) => {                                 //New Update
     tr.appendChild(tdComments);
     return tr;
 }
-
-// const newTaskTemplate = (task) => {                             //Old Version:
-//      return `
-//     <tr>
-//          <td>${ task.date }</td>
-//          <td>${ task.name }</td>
-//          <td>${ task.category }</td>
-//          <td>${ task.status }</td>
-//          <td>${ task.priority }</td>
-//          <td>${ task.deadline }</td>
-//          <td>${ task.comments }</td>
-//      </tr>
-//      `
-// }
 
 
 /*** Renderers ***/
@@ -147,14 +100,6 @@ const renderTaskLogPage = async () => {
     mainDiv().appendChild(table);
 }
 
-
-// const renderTaskLogPage = () => {                       //Old Version:
-//     mainDiv().innerHTML = taskLogTemplate();
-// }
-
-// const renderTasks = () => {                               //Old Version: 
-//     return tasks.map(task => newTaskTemplate(task) )
-// }
 
 const renderTaskForm = () => {
 //    alert("The Task Form has been loaded!")                    //A message box will be displayed to confirm that the "Add New Task" link works.  test..test..test..
@@ -300,53 +245,9 @@ const renderTaskForm = () => {
 
     mainDiv().appendChild(h1);
     mainDiv().appendChild(form);
-
-
-//     //------------------------------------------------------------------------
-   //<h1 class="center-align">Add New Task</h1>                   
-//    <form>
-//       {/* <div class="input-field">                  
-//       <i class="material-icons prefix">event</i>
-//        <input id="icon_prefix" type="text">
-//       <label for="icon_prefix">Date</label>
-//        </div> */}
-//        <div class="input-field">                      
-//       <i class="material-icons prefix">assignment</i>
-//        <input id="icon_prefix" type="text">
-//        <label for="icon_prefix">Name</label>
-//        </div>
-//        <div class="input-field">                      
-//        <i class="material-icons prefix">archive</i>
-//        <input id="icon_prefix" type="text">
-//        <label for="icon_prefix">Category</label>
-//        </div>
-//        <div class="input-field">                      
-//        <i class="material-icons prefix">aspect_ratio</i>
-//        <input id="icon_prefix" type="text">
-//        <label for="icon_prefix">Status</label>
-//        </div>
-//        <div class="input-field">                      
-//        <i class="material-icons prefix">assistant_photo</i>
-//        <input id="icon_prefix" type="text">
-//       <label for="icon_prefix">Priority</label>
-//        </div>
-//        <div class="input-field">                      
-//        <i class="material-icons prefix">timer</i>
-//       <input id="icon_prefix" type="text">
-//        <label for="icon_prefix">Deadline</label>
-//        </div>
-//        <div class="input-field">                      
-//        <i class="material-icons prefix">insert_comment</i>
-//        <input id="icon_prefix" type="text">
-//        <label for="icon_prefix">Comments</label>
-//        </div>
-//        <div>
-//        <button class="btn waves-effect waves-light margin-right" type="submit" name="action">Submit
-//            <i class="material-icons right">send</i>
-//          </button>
-//        </div>              
-//     </form>                                                            
+                                                           
 }                                                             
+
 
 /*** Events ***/
 const loadTasks = async () => {
