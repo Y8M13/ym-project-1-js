@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "date": "6 Jan 2022",
+      "name": "Mop Floor",
+      "category": "Home",
+      "priority": "High",
+      "status": "In Progress",
+      "deadline": "13 Jan 2022",
+      "comments": "Mop kitchen floor"
+    },
+    {
+      "id": 2,
+      "date": "6 Jan 2022",
+      "name": "Calculus Homework",
+      "category": "School",
+      "priority": "Low",
+      "status": "Not Started",
+      "deadline": "31 Jan 2022",
+      "comments": "Need to complete Ch 1"
+    },
+    {
+      "id": 3,
+      "date": "6 Jan 2022",
+      "name": "Pay Bills",
+      "category": "Expenses",
+      "priority": "High",
+      "status": "Complete",
+      "deadline": "6 Jan 2022",
+      "comments": "January Bills are DUE"
+    },
+    {
+      "date": "1 Feb 2022",
+      "name": "Boxes",
+      "category": "Home",
+      "status": "Not Started",
+      "priority": "Medium",
+      "deadline": "4 Feb 2022",
+      "comments": "Need to get boxes to organize bedroom.",
+      "id": 4
+    },
+    {
+      "date": "1 Feb 2022",
+      "name": "Mop Kitchen ",
+      "category": "Chores",
+      "status": "In Progress",
+      "priority": "High",
+      "deadline": "2 Feb 2022",
+      "comments": "Mop kitchen floor.",
+      "id": 5
+    },
+    {
+      "date": "2 Feb 2022",
+      "name": "Organize",
+      "category": "Home",
+      "status": "In Progress",
+      "priority": "High",
+      "deadline": "3 Feb 2022",
+      "comments": "Need to organize family room.",
+      "id": 6
+    },
+    {
+      "date": "2 Feb 2022",
+      "name": "Pay Bills",
+      "category": "Expenses",
+      "status": "In Progress",
+      "priority": "High",
+      "deadline": "2 Feb 2022",
+      "comments": "Pay all bills for the month of February.",
+      "id": 7
+    }
+  ]
+}
