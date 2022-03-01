@@ -1,5 +1,3 @@
-//alert('Hola Hola')
-
 
 /*** Globals ***/
 const baseUrl = "http://localhost:3000";
@@ -19,8 +17,8 @@ const deadlineInput = () => document.getElementById("deadline");
 const commentsInput = () => document.getElementById("comments");
 
   
-
-const newTaskTemplate = (task) => {                                 //New Updates:
+//*** Template ***/
+const newTaskTemplate = (task) => {                                 
     const tr = document.createElement("tr");
     const tdDate = document.createElement("td");
     const tdName = document.createElement("td");
@@ -48,7 +46,6 @@ const newTaskTemplate = (task) => {                                 //New Update
 
 
 /*** Renderers ***/
-
 const renderHomePage = ()=> {
     mainDiv().innerHTML = " "                         //New Update:  this is set to an empty string to clear out all of the HTML between the tags
     const h1 = document.createElement("h1");
@@ -56,10 +53,6 @@ const renderHomePage = ()=> {
     h1.innerText = "Welcome to my Task Manager"  
     mainDiv().appendChild(h1);                     
 }
-
-// const renderHomePage = () => {                       //Old Version:  renders the homepage to the div tag in the HTML.
-//    mainDiv().innerHTML = homePageTemplate();         //the h1 string will be returned
-// }                                                    //this renderHomePage function is reusable on click and when the DOM loads to show our home page by default
 
 const renderTaskLogPage = async () => {
     await loadTasks();
@@ -99,7 +92,6 @@ const renderTaskLogPage = async () => {
     mainDiv().appendChild(h1);
     mainDiv().appendChild(table);
 }
-
 
 const renderTaskForm = () => {
 //    alert("The Task Form has been loaded!")                    //A message box will be displayed to confirm that the "Add New Task" link works.  test..test..test..
@@ -263,22 +255,12 @@ const homePageLinkEvent = () => {
    })
 }
 
-// const taskLogLinkEvent = () => {
-//     taskLogLink().addEventListener("click", async (e) => {
-//         e.preventDefault();
-//         await loadTasks();                                          //May need to remove this
-//         renderTaskLogPage();
-        
-//     })
-// }
-
 const taskLogLinkEvent = () => {
     taskLogLink().addEventListener("click", (e) => {
         e.preventDefault();
         renderTaskLogPage();
     })
 }
-
 
 const taskFormLinkEvent = () => {
    taskFormLink().addEventListener("click", (e) => {
@@ -289,23 +271,7 @@ const taskFormLinkEvent = () => {
 
 const submitFormEvent = e => {
     e.preventDefault();                                                        //because I do not want the form page to refresh
-    //const [date, name, category, status, priority, deadline, comments] = e.target.children;    //how to do mass assignment
     
-    // console.log("date", date)
-    // console.log("name", name)
-    // console.log("category", category)
-    // console.log("status", status)
-    // console.log("priority", priority)
-    // console.log("deadline", deadline)
-    // console.log("comments", comments)
-
-    // console.log("date", date.children[0].value)
-    // console.log("name", name.children[0].value)
-    // console.log("category", category.children[0].value)
-    // console.log("status", status.children[0].value)
-    // console.log("priority", priority.children[0].value)
-    // console.log("deadline", deadline.children[0].value)
-    // console.log("comments", comments.children[0].value)
 
     console.log("date", dateInput().value)
     console.log("name", nameInput().value)
@@ -343,7 +309,6 @@ const submitFormEvent = e => {
 
 //debugger;
 
-/*****************/
 
 /*** WHEN THE DOM LOADS ***/
 document.addEventListener("DOMContentLoaded", () => {   //when the page loads this code will render the homepage

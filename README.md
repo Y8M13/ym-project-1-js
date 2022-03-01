@@ -1,7 +1,7 @@
 # Tasks Manager
 
 ### OVERVIEW
-Task Manager will be used to create new tasks and keep a record of all tasks that have been loaded.  This app will allow tasks to be created and tracked.
+Task Manager will be used to create new tasks and keep a record of all tasks that have been loaded.  
 
 ### FEATURES
 - Home Page (main page)
@@ -17,5 +17,6 @@ Task Manager will be used to create new tasks and keep a record of all tasks tha
 - Navigations
 - Submit button
 
-### STRETCH
+### STRETCH GOALS
 - Delete button
+- Update button
